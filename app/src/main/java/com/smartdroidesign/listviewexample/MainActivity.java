@@ -10,15 +10,23 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Food[] mFood = new Food[18];
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        for (int i = 0; i < mFood.length; i++) {
+            mFood[i] = new Food("Bacon" + i);
+        }
+
         // List of Strings
         String[] foods = {"Bacon", "Ham", "Tuna", "Candy", "Meatball", "Potato"};
         // ListAdapter converts the Strings to a List
-        ListAdapter myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, foods);
+        ListAdapter myAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mFood);
         // Getting the reference
         ListView myListView = findViewById(R.id.list_food);
         // Se the Adapter to the converter
