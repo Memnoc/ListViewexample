@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // List of Strings
-        String[] foods = {"Bacon", "Ham", "Tuna", "Candy", "Meatball", "Potato"};
+//        String[] foods = {"Bacon", "Ham", "Tuna", "Candy", "Meatball", "Potato"};
         // ListAdapter converts the Strings to a List
         ListAdapter myAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mFood);
         // Getting the reference
